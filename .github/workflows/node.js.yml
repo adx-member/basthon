@@ -37,25 +37,15 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: artifacts
-          path: build/
+          path: ./build
+
+  deploy:
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
-
-  # deploy:
-  #   needs: build
-  #   environment:
-  #     name: github-pages
-  #     url: ${{ steps.deployment.outputs.page_url }}
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Checkout code
-  #       uses: actions/checkout@v2
-  #     - name: Download artifacts
-  #       uses: actions/download-artifact@v2
-  #       with:
-  #         name: artifacts
-  #         path: build/
-  #     - name: Deploy to GitHub Pages
-  #       id: deployment
-  #       uses: actions/deploy-pages@v2
