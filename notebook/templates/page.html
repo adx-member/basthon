@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}Jupyter Notebook{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block meta %}
+    {% endblock %}
+  </head>
+  <body class="{% block bodyclasses %}{% endblock %}"
+        {% block params %}
+        {% endblock params %}
+        dir="ltr">
+    <noscript>
+      <div id='noscript'>
+        {% trans %}Jupyter Notebook requires JavaScript.{% endtrans %}<br>
+        {% trans %}Please enable it to proceed. {% endtrans %}
+      </div>
+    </noscript>
+    <div id="header" role="navigation" aria-label="{% trans %}Top Menu{% endtrans %}">
+      <div id="header-container" class="container">
+        <div id="ipython_notebook" class="nav navbar-brand">
+          {% block logo %}<img src=<%=require("../../notebook/static/base/images/logo.png")%> alt='Jupyter Notebook'/>{% endblock %}
+        </div>
+        {% block headercontainer %}
+        {% endblock %}
+        {% block header_buttons %}
+        {% block login_widget %}
+        <span id="login_widget">
+          <button id="logout" class="btn btn-sm navbar-btn">{% trans %}Logout{% endtrans %}</button>
+        </span>
+        {% endblock %}
+        {% endblock header_buttons %}
+      </div>
+      <div class="header-bar"></div>
+      {% block header %}
+      {% endblock %}
+    </div>
+    <div id="site">
+      {% block site %}
+      {% endblock %}
+    </div>
+    {% block after_site %}
+    {% endblock %}
+    {% block script %}
+    {% endblock %}
+  </body>
+</html>
