@@ -20,8 +20,8 @@
         dir="ltr">
     <noscript>
       <div id='noscript'>
-        Jupyter Notebook nécessite JavaScript<br>
-        Merci de l'activer pour continuer.
+        Jupyter 노트북에는 JavaScript가 필요합니다.<br>
+        계속하려면 활성화하십시오.
       </div>
     </noscript>
     <div id="header" role="navigation" aria-label="Top Menu">
@@ -38,7 +38,7 @@
           <img class="current_kernel_logo" alt="Current Kernel Logo" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"/>
         </span>
         <span id="login_widget">
-          <button id="logout" class="btn btn-sm navbar-btn hidden">Se déconnecter</button>
+          <button id="logout" class="btn btn-sm navbar-btn hidden">로그아웃</button>
         </span>
       </div>
       <div class="header-bar"></div>
@@ -51,10 +51,10 @@
                 <span class="navbar-text">Menu</span>
               </button>
               <p id="kernel_indicator" class="navbar-text indicator_area">
-                <span class="kernel_indicator_name">Noyau</span>
+                <span class="kernel_indicator_name">커널</span>
                 <i id="kernel_indicator_icon"></i>
               </p>
-              <i id="readonly-indicator" class="navbar-text" title='Ce notebook est en lecture seule'>
+              <i id="readonly-indicator" class="navbar-text" title='This notebook is read-only'>
                 <span class="fa-stack">
                   <i class="fa fa-save fa-stack-1x"></i>
                   <i class="fa fa-ban fa-stack-2x text-danger"></i>
@@ -64,33 +64,33 @@
               <span id="notification_area"></span>
               <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                  <li class="dropdown"><a href="#" id="filelink" aria-haspopup="true" aria-controls="file_menu" class="dropdown-toggle" data-toggle="dropdown">Fichier</a>
+                  <li class="dropdown"><a href="#" id="filelink" aria-haspopup="true" aria-controls="file_menu" class="dropdown-toggle" data-toggle="dropdown">파일</a>
                     <ul id="file_menu" class="dropdown-menu" role="menu" aria-labelledby="filelink">
                       <li id="new_notebook" class="dropdown-submenu" role="none">
-                        <a href="#" role="menuitem">Nouveau Notebook<span class="sr-only">Toggle Dropdown</span></a>
+                        <a href="#" role="menuitem">새 노트북<span class="sr-only">Toggle Dropdown</span></a>
                         <ul class="dropdown-menu" id="menu-new-notebook-submenu"></ul>
                       </li>
                       <li id="open_notebook" role="none"
-                          title="Ouvre un notebook, charge un module ou un fichier">
-                        <a href="#" role="menuitem">Ouvrir...</a></li>
+                          title="Open a notebook, load a module or a file">
+                        <a href="#" role="menuitem">열기...</a></li>
                       <!-- <hr/> -->
                       <li class="divider hidden" role="none"></li>
                       <li id="copy_notebook" role="none"
-                          title="Ouvrir une copie du contenu de ce notebook et démarrer un nouveau noyau"
+                          title="Open a copy of the contents of this notebook and start a new kernel"
                           class="hidden">
-                        <a href="#" role="menuitem">Faire une copie...</a></li>
+                        <a href="#" role="menuitem">사본 만들기...</a></li>
                       <li id="save_notebook_as" role="none"
-                          title="Enregistrer une copie du notebook">
-                        <a href="#" role="menuitem">Enregistrer sous...</a></li>
-                      <li id="rename_notebook" role="none" class="hidden"><a href="#" role="menuitem">Renommer...</a></li>
-                      <li id="save_checkpoint" role="none" class="hidden"><a href="#" role="menuitem">Créer une nouvelle sauvegarde</a></li>
+                          title="Save a copy of the notebook">
+                        <a href="#" role="menuitem">다른 이름으로 저장...</a></li>
+                      <li id="rename_notebook" role="none" class="hidden"><a href="#" role="menuitem">이름 바꾸기...</a></li>
+                      <li id="save_checkpoint" role="none" class="hidden"><a href="#" role="menuitem">새 백업 만들기</a></li>
                       <!-- <hr/> -->
                       <li class="divider" role="none"></li>
-                      <li id="restore_checkpoint" role="none"><a href="#" role="menuitem">Restaurer une sauvegarde</a>
+                      <li id="restore_checkpoint" role="none"><a href="#" role="menuitem">백업 복원</a>
                       </li>
                       <li class="divider hidden" role="none"></li>
-                      <li id="print_preview" role="none" class="hidden"><a href="#" role="menuitem">Imprimer l'aperçu</a></li>
-                      <li class="dropdown-submenu hidden" role="none"><a href="#" role="menuitem">Télécharger au format<span class="sr-only">Toggle Dropdown</span></a>
+                      <li id="print_preview" role="none" class="hidden"><a href="#" role="menuitem">인쇄 미리보기</a></li>
+                      <li class="dropdown-submenu hidden" role="none"><a href="#" role="menuitem">다른 이름으로 다운로드<span class="sr-only">Toggle Dropdown</span></a>
                         <ul id="download_menu" class="dropdown-menu">
                           <li id="download_asciidoc">
                             <a href="#">asciidoc (.asciidoc)</a>
@@ -121,197 +121,197 @@
                           </li>
                         </ul>
                       </li>
-                      <li class="dropdown-submenu hidden" role="none"><a href="#" role="menuitem">Déployer en tant que</a>
+                      <li class="dropdown-submenu hidden" role="none"><a href="#" role="menuitem">다음으로 배포</a>
                         <ul id="deploy_menu" class="dropdown-menu"></ul>
                       </li>
                       <li class="divider hidden" role="none"></li>
                       <li id="trust_notebook" role="none"
-                          title="Faire confiance à la sortie de ce notebook"
+                          title="Trust the output of this notebook"
                           class="hidden">
-                        <a href="#" role="menuitem">Faire confiance au notebook</a></li>
+                        <a href="#" role="menuitem">Trust the notebook</a></li>
                       <li class="divider hidden" role="none"></li>
                       <li id="close_and_halt" role="none"
-                          title="Arrêter le noyau de ce notebook et fermer cette fenêtre"
+                          title="Stop the kernel of this notebook and close this window"
                           class="hidden">
-                        <a href="#" role="menuitem">Fermer et arrêter</a></li>
+                        <a href="#" role="menuitem">close and stop</a></li>
                     </ul>
                   </li>
-                  <li class="dropdown"><a href="#" class="dropdown-toggle" id="editlink" data-toggle="dropdown" aria-haspopup="true" aria-controls="edit_menu">Édition</a>
+                  <li class="dropdown"><a href="#" class="dropdown-toggle" id="editlink" data-toggle="dropdown" aria-haspopup="true" aria-controls="edit_menu">편집</a>
                     <ul id="edit_menu" class="dropdown-menu" role="menu" aria-labelledby="editlink">
-                      <li id="cut_cell" role="none"><a href="#" role="menuitem">Couper les cellules</a></li>
-                      <li id="copy_cell" role="none"><a href="#" role="menuitem">Copier les cellules</a></li>
-                      <li id="paste_cell_above" class="disabled" role="none"><a href="#" role="menuitem" aria-disabled="true">Coller les cellules avant</a></li>
-                      <li id="paste_cell_below" class="disabled" role="none"><a href="#" role="menuitem" aria-disabled="true">Coller les cellules après</a></li>
-                      <li id="paste_cell_replace" class="disabled" role="none"><a href="#" role="menuitem" aria-disabled="true">Coller les cellules &amp; remplacer</a></li>
-                      <li id="delete_cell" role="none"><a href="#" role="menuitem">Supprimer les cellules</a></li>
-                      <li id="undelete_cell" class="disabled" role="none"><a href="#" role="menuitem" aria-disabled="true">Annuler la suppression des cellules</a></li>
+                      <li id="cut_cell" role="none"><a href="#" role="menuitem">셀 잘라내기</a></li>
+                      <li id="copy_cell" role="none"><a href="#" role="menuitem">셀 복사</a></li>
+                      <li id="paste_cell_above" class="disabled" role="none"><a href="#" role="menuitem" aria-disabled="true">위에 셀 붙여넣기</a></li>
+                      <li id="paste_cell_below" class="disabled" role="none"><a href="#" role="menuitem" aria-disabled="true">아래에 셀 붙여넣기</a></li>
+                      <li id="paste_cell_replace" class="disabled" role="none"><a href="#" role="menuitem" aria-disabled="true">셀을 붙여 넣고 변경</a></li>
+                      <li id="delete_cell" role="none"><a href="#" role="menuitem">셀 삭제</a></li>
+                      <li id="undelete_cell" class="disabled" role="none"><a href="#" role="menuitem" aria-disabled="true">Undelete cells</a></li>
                       <li class="divider" role="none"></li>
-                      <li id="split_cell" role="none"><a href="#" role="menuitem">Diviser la cellule</a></li>
-                      <li id="merge_cell_above" role="none"><a href="#" role="menuitem">Fusionner avec la cellule précédente</a></li>
-                      <li id="merge_cell_below" role="none"><a href="#" role="menuitem">Fusionner avec la cellule suivante</a></li>
+                      <li id="split_cell" role="none"><a href="#" role="menuitem">셀 나누기</a></li>
+                      <li id="merge_cell_above" role="none"><a href="#" role="menuitem">위 셀과 합치기</a></li>
+                      <li id="merge_cell_below" role="none"><a href="#" role="menuitem">아래 셀과 합치기</a></li>
                       <li class="divider" role="none"></li>
-                      <li id="move_cell_up" role="none"><a href="#" role="menuitem">Déplacer la cellule vers le haut</a></li>
-                      <li id="move_cell_down" role="none"><a href="#" role="menuitem">Déplacer la cellule vers le bas</a></li>
+                      <li id="move_cell_up" role="none"><a href="#" role="menuitem">셀을 위로 이동</a></li>
+                      <li id="move_cell_down" role="none"><a href="#" role="menuitem">셀을 아래로 이동</a></li>
                       <li class="divider" role="none"></li>
-                      <li id="edit_nb_metadata" role="none"><a href="#" role="menuitem">Éditer les méta-données du notebook</a></li>
+                      <li id="edit_nb_metadata" role="none"><a href="#" role="menuitem">Edit notebook metadata</a></li>
                       <li class="divider" role="none"></li>
-                      <li id="find_and_replace" role="none"><a href="#" role="menuitem"> Rechercher et remplacer </a></li>
+                      <li id="find_and_replace" role="none"><a href="#" role="menuitem"> Find and Replace </a></li>
                       <li class="divider" role="none"></li>
-                      <li id="cut_cell_attachments" role="none"><a href="#" role="menuitem">Couper les pièces-Jointes de la cellule</a></li>
-                      <li id="copy_cell_attachments" role="none"><a href="#" role="menuitem">Copier les pièces-jointes de la cellule</a></li>
-                      <li id="paste_cell_attachments"  class="disabled" role="none"><a href="#" role="menuitem" aria-disabled="true">Coller les pièces-jointes de la cellule</a></li>
+                      <li id="cut_cell_attachments" role="none"><a href="#" role="menuitem">Cut Cell Attachments</a></li>
+                      <li id="copy_cell_attachments" role="none"><a href="#" role="menuitem">Copy cell attachments</a></li>
+                      <li id="paste_cell_attachments"  class="disabled" role="none"><a href="#" role="menuitem" aria-disabled="true">Paste cell attachments</a></li>
                       <li class="divider" role="none"></li>
-                      <li id="insert_image" class="disabled" role="none"><a href="#" role="menuitem" aria-disabled="true">  Insérer une image </a></li>
+                      <li id="insert_image" class="disabled" role="none"><a href="#" role="menuitem" aria-disabled="true">  Insert picture </a></li>
                     </ul>
                   </li>
-                  <li class="dropdown"><a href="#" class="dropdown-toggle" id="viewlink" data-toggle="dropdown" aria-haspopup="true" aria-controls="view_menu">Affichage</a>
+                  <li class="dropdown"><a href="#" class="dropdown-toggle" id="viewlink" data-toggle="dropdown" aria-haspopup="true" aria-controls="view_menu">보기</a>
                     <ul id="view_menu" class="dropdown-menu" role="menu" aria-labelledby="viewlink">
                       <li id="toggle_header" role="none"
-                          title="Afficher/Masquer le logo et le titre du notebook (au-dessus de la barre de menu)">
-                        <a href="#" role="menuitem">Afficher/Masquer l'en-tête</a>
+                          title="Show/Hide notebook logo and title (above menu bar)">
+                        <a href="#" role="menuitem">Show/Hide Header</a>
                       </li>
                       <li id="toggle_toolbar" role="none"
-                          title="Afficher/Masquer les icônes d'action (en-dessous de la barre de menu)">
-                        <a href="#" role="menuitem">Afficher/Masquer la barre d'outils</a>
+                          title="Show/Hide action icons (below menu bar)">
+                        <a href="#" role="menuitem">Show/Hide Toolbar</a>
                       </li>
                       <li id="toggle_line_numbers" role="none"
-                          title="Afficher/Masquer les numéros de ligne dans les cellules">
-                        <a href="#" role="menuitem">Afficher/Masquer les numéros de ligne</a>
+                          title="Show/Hide line numbers in cells">
+                        <a href="#" role="menuitem">줄 번호 표시</a>
                       </li>
                       <li id="menu-cell-toolbar" class="dropdown-submenu" role="none">
-                        <a href="#" role="menuitem">Barre d'outil de cellule</a>
+                        <a href="#" role="menuitem">Cell toolbar</a>
                         <ul class="dropdown-menu" id="menu-cell-toolbar-submenu"></ul>
                       </li>
                     </ul>
                   </li>
-                  <li class="dropdown"><a href="#" class="dropdown-toggle" id="insertlink" data-toggle="dropdown" aria-haspopup="true" aria-controls="insert_menu">Insérer</a>
+                  <li class="dropdown"><a href="#" class="dropdown-toggle" id="insertlink" data-toggle="dropdown" aria-haspopup="true" aria-controls="insert_menu">Insert</a>
                     <ul id="insert_menu" class="dropdown-menu" role="menu" aria-labelledby="insertlink">
                       <li id="insert_cell_above" role="none"
-                          title="Insérer une cellule de code vide avant de la cellule active">
-                        <a href="#" role="menuitem">Insérer une cellule avant</a></li>
+                          title="Insert an empty code cell before the active cell">
+                        <a href="#" role="menuitem">Insert cell before</a></li>
                       <li id="insert_cell_below" role="none"
-                          title="Insérer une cellule de code vide après la cellule active">
-                        <a href="#" role="menuitem">Insérer une cellule après</a></li>
+                          title="Insert blank code cell after active cell">
+                        <a href="#" role="menuitem">Insert cell after</a></li>
                     </ul>
                   </li>
-                  <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Cellule</a>
+                  <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">실행</a>
                     <ul id="cell_menu" class="dropdown-menu">
-                      <li id="run_cell" title="Exécuter cette cellule, et déplacer le curseur à la suivante">
-                        <a href="#">Exécuter les cellules</a></li>
-                      <li id="run_cell_select_below" title="Exécuter cette cellule, sélectionner la suivante">
-                        <a href="#">Exécuter les cellules et sélectionner la suivante</a></li>
-                      <li id="run_cell_insert_below" title="Exécuter la cellule et insérer à la suite">
-                        <a href="#">Exécuter les cellules et insérer après</a></li>
-                      <li id="run_all_cells" title="Exécuter toutes les cellules du notebook">
-                        <a href="#">Exécuter tout</a></li>
-                      <li id="run_all_cells_above" title="Exécuter toutes les cellules avant celle-ci (non incluse)">
-                        <a href="#">Exécuter toutes les précédentes</a></li>
-                      <li id="run_all_cells_below" title="Exécuter cette cellule et toutes les suivantes">
-                        <a href="#">Exécuter toutes les suivantes</a></li>
+                      <li id="run_cell" title="Run this cell, and move the cursor to the next one">
+                        <a href="#">선택된 셀 실행</a></li>
+                      <li id="run_cell_select_below" title="Run this cell, select the next one">
+                        <a href="#">Run cells and select next</a></li>
+                      <li id="run_cell_insert_below" title="Run cell and insert after">
+                        <a href="#">Run cells and insert after</a></li>
+                      <li id="run_all_cells" title="Run all cells in the notebook">
+                        <a href="#">모두 실행</a></li>
+                      <li id="run_all_cells_above" title="Run all cells before this one (not included)">
+                        <a href="#">Run all previous</a></li>
+                      <li id="run_all_cells_below" title="Run this cell and all subsequent ones">
+                        <a href="#">Run all of the following</a></li>
                       <li class="divider"></li>
                       <li id="change_cell_type" class="dropdown-submenu"
-                          title="Toutes les cellules dans le notebook ont un type de cellule. Par défaut, les nouvelles cellules sont de type 'Code'">
-                        <a href="#">Type de cellule</a>
+                          title="All cells in the notebook have a cell type. By default, new cells are of type 'Code'">
+                        <a href="#">Cell type</a>
                         <ul class="dropdown-menu">
                           <li id="to_code"
-                              title="Le contenu sera envoyé au noyau pour exécution, et la sortie sera affichée dans le pied de cellule">
+                              title="The content will be sent to the core for execution, and the output will be displayed in the cell footer">
                             <a href="#">Code</a></li>
                           <li id="to_markdown"
-                              title="Le contenu sera rendu en tant que HTML afin de servir de texte explicatif">
+                              title="Content will be rendered as HTML to serve as explanatory text">
                             <a href="#">Markdown</a></li>
                           <li id="to_raw"
-                              title="Le contenu passera par nbconvert qui ne l'altèrera pas">
-                            <a href="#">Texte Brut</a></li>
+                              title="The content will pass through nbconvert which will not alter it">
+                            <a href="#">Plain Text</a></li>
                         </ul>
                       </li>
                       <li class="divider"></li>
-                      <li id="current_outputs" class="dropdown-submenu"><a href="#">Sorties actuelles</a>
+                      <li id="current_outputs" class="dropdown-submenu"><a href="#">현재 셀 출력</a>
                         <ul class="dropdown-menu">
                           <li id="toggle_current_output"
-                              title="Masquer/Afficher la sortie de la cellule actuelle">
-                            <a href="#">Afficher/Masquer</a>
+                              title="현재 셀 출력 숨기기/표시">
+                            <a href="#">현재 셀 출력 숨기기/표시</a>
                           </li>
                           <li id="toggle_current_output_scroll"
-                              title="Faire défiler la sortie de la cellule actuelle">
-                            <a href="#">Activer/Désactiver le défilement</a>
+                              title="현재 셀 출력 스크롤">
+                            <a href="#">현재 셀 출력 스크롤 활성화/비활성화</a>
                           </li>
                           <li id="clear_current_output"
-                              title="Effacer la sortie de la cellule actuelle">
-                            <a href="#">Effacer</a>
+                              title="현재 셀 출력 지우기">
+                            <a href="#">현재 셀 출력 지우기</a>
                           </li>
                         </ul>
                       </li>
-                      <li id="all_outputs" class="dropdown-submenu"><a href="#">Toutes les sorties</a>
+                      <li id="all_outputs" class="dropdown-submenu"><a href="#">모든 셀 출력</a>
                         <ul class="dropdown-menu">
                           <li id="toggle_all_output"
-                              title="Afficher/Masquer la sortie de toutes les cellules">
-                            <a href="#">Afficher/Masquer</a>
+                              title="모든 셀의 출력 표시/숨기기">
+                            <a href="#">모든 셀의 출력 표시/숨기기</a>
                           </li>
                           <li id="toggle_all_output_scroll"
-                              title="Faire défiler la sortie de toutes les cellules">
-                            <a href="#">Activer/Désactiver le défilement</a>
+                              title="모든 셀의 출력 스크롤">
+                            <a href="#">모든 셀의 스크롤 활성화/비활성화</a>
                           </li>
                           <li id="clear_all_output"
-                              title="Effacer la sortie de toutes les cellules">
-                            <a href="#">Effacer</a>
+                              title="모든 셀의 출력 지우기">
+                            <a href="#">모든 셀의 출력 지우기</a>
                           </li>
                         </ul>
                       </li>
                     </ul>
                   </li>
-                  <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" id="kernellink">Noyau</a>
+                  <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" id="kernellink">커널</a>
                     <ul id="kernel_menu" class="dropdown-menu" aria-labelledby="kernellink">
                       <li id="int_kernel"
-                          title="Envoyer l'interruption clavier (CTRL-C) au noyau">
-                        <a href="#">Interrompre</a>
+                          title="Send keyboard interrupt (CTRL-C) to kernel">
+                        <a href="#">커널 중지</a>
                       </li>
                       <li id="restart_kernel"
-                          title="Redémarrer le noyau">
-                        <a href="#">Redémarrer</a>
+                          title="Restart kernel">
+                        <a href="#">커널 재시작</a>
                       </li>
                       <li id="restart_clear_output"
-                          title="Redémarrer le noyau et effacer toutes les sorties">
-                        <a href="#">Redémarrer  &amp; effacer les sorties</a>
+                          title="Restart kernel and clear all outputs">
+                        <a href="#">커널 재시작 후 클리어</a>
                       </li>
                       <li id="restart_run_all"
-                          title="Redémarrer le noyau et ré-exécuter le notebook">
-                        <a href="#">Redémarrer &amp; tout exécuter</a>
+                          title="Restart the kernel and run the notebook again">
+                        <a href="#">커널 재시작 후 모두 실행</a>
                       </li>
                       <li id="reconnect_kernel"
-                          title="Reconnecter au noyau">
-                        <a href="#">Reconnecter</a>
+                          title="Reconnect kernel">
+                        <a href="#">커널 재연결 시도</a>
                       </li>
                       <li id="shutdown_kernel"
                           title="Shutdown the Kernel">
-                        <a href="#">Arrêter</a>
+                        <a href="#">커널 종료</a>
                       </li>
                       <li class="divider"></li>
                       <li id="menu-change-kernel" class="dropdown-submenu">
-                        <a href="#">Changer de noyau</a>
+                        <a href="#">커널 변경</a>
                         <ul class="dropdown-menu" id="menu-change-kernel-submenu"></ul>
                       </li>
                     </ul>
                   </li>
-                  <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Aide</a>
+                  <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">도움말</a>
                     <ul id="help_menu" class="dropdown-menu">
-                      <li id="notebook_tour" title="Une rapide visite de l'interface utilisateur du notebook"><a href="#">Visite de l'interface utilisateur</a></li>
-                      <li id="keyboard_shortcuts" title="Ouvre une infobulle listant tous les raccourcis clavier"><a href="#">Raccourcis clavier</a></li>
-                      <li id="edit_keyboard_shortcuts" title="Ouvre une boîte de dialogue permettant de modifier les raccourcis clavier"><a href="#">Editer les raccourcis clavier</a></li>
+                      <li id="notebook_tour" title="노트북 사용자 인터페이스 둘러보기"><a href="#">사용자 인터페이스 둘러보기</a></li>
+                      <li id="keyboard_shortcuts" title="모든 키보드 단축키를 나열하는 툴팁을 엽니다."><a href="#">키보드 단축키</a></li>
+                      <li id="edit_keyboard_shortcuts" title="키보드 단축키를 변경하기 위한 대화 상자를 엽니다."><a href="#">키보드 단축키 편집</a></li>
                       <li class="divider"></li>
-                      <li><a rel="noreferrer" href="https://basthon.fr/doc.html" target="_blank" title="S&#39;ouvre dans une nouvelle fenêtre">
+                      <li><a rel="noreferrer" href="https://basthon.fr/doc.html" target="_blank" title="새 창에서 열립니다">
                           <i class="fa fa-external-link menu-icon pull-right"></i>
-                          Aide Basthon
+                          Basthon 도움말
                       </a></li>
-                      <li><a rel="noreferrer" href="http://nbviewer.jupyter.org/github/ipython/ipython/blob/3.x/examples/Notebook/Index.ipynb" target="_blank" title="S&#39;ouvre dans une nouvelle fenêtre">
+                      <li><a rel="noreferrer" href="http://nbviewer.jupyter.org/github/ipython/ipython/blob/3.x/examples/Notebook/Index.ipynb" target="_blank" title="새 창에서 열립니다">
                           <i class="fa fa-external-link menu-icon pull-right"></i>
-                          Aide notebook
+                          notebook 도움말
                       </a></li>
-                      <li><a rel="noreferrer" href="https://help.github.com/articles/markdown-basics/" target="_blank" title="S&#39;ouvre dans une nouvelle fenêtre">
+                      <li><a rel="noreferrer" href="https://help.github.com/articles/markdown-basics/" target="_blank" title="새 창에서 열립니다">
                           <i class="fa fa-external-link menu-icon pull-right"></i>
                           Markdown
                       </a></li>
                       <li class="divider"></li>
-                      <li title="À propos de Jupyter Notebook"><a id="notebook_about" href="#">À propos</a></li>
+                      <li title="About Jupyter Notebook"><a id="notebook_about" href="#">About</a></li>
                     </ul>
                   </li>
                 </ul>
